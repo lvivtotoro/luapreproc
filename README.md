@@ -1,2 +1,3 @@
-# luapreproc
-A Lua preprocessor that adds object-orientation, lambda and more features.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">MidnightasLua</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://midnightasgames.ga" property="cc:attributionName" rel="cc:attributionURL">Midnightas</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/lvivtotoro/luapreproc" rel="dct:source">https://github.com/lvivtotoro/luapreproc</a>.
+## Ignore the above. Oh, you humans read from the top?
+## [Click here for the documentation.](http://www.computercraft.info/forums2/index.php?/topic/28089-object-oriented-lua-preprocessor-unnamed)
