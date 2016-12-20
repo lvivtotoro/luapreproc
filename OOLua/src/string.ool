@@ -1,0 +1,37 @@
+class StringBuilder contains
+	str = "";
+	constructor(str)
+		if str then
+			self.str = str;
+		end
+	end
+	function add(other)
+		self.str = self.str .. tostring(other);
+		return self;
+	end
+	function slice(start, nextEnd)
+		self.str = self.str:sub(start, nextEnd);
+		return self;
+	end
+	function reverse()
+		self.str = self.str:reverse();
+		return self;
+	end
+	function length()
+		return #self.str;
+	end
+	function addAt(index, to)
+		-- Found this clever code on http://stackoverflow.com/a/5250286/2564491
+		self.str = ("%s%s%s"):format(self.str:sub(1, index - 1), to, self.str:sub(index, self.str:len()));
+		return self;
+	end
+	function charAt(index)
+		return self.str:sub(index, index);
+	end
+	function __len()
+		return self.length();
+	end
+	function __tostring()
+		return self.str;
+	end
+end
