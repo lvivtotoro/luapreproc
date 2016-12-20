@@ -107,8 +107,8 @@ public class OOLua {
 
 		public Object visitFuncDecl(FuncDeclContext ctx) {
 			StringBuilder builder = new StringBuilder("function");
-			if (ctx.identifier() != null)
-				builder.append(" " + ctx.identifier().getText());
+			if (ctx.dotNotation() != null)
+				builder.append(" " + ctx.dotNotation().getText());
 			builder.append("(" + visit(ctx.funcDeclArgs()) + ")");
 			builder.append(visit(ctx.program()) + "end ");
 			return builder.toString();
@@ -386,7 +386,7 @@ public class OOLua {
 					FuncDeclContext funcDecl = ((FuncMemberContext) member).funcDecl();
 					builder.append("function " + ctx.name.getText()
 							+ (((FuncMemberContext) member).staticKeyword() == null ? ":" : ".")
-							+ funcDecl.identifier().getText());
+							+ visit(funcDecl.dotNotation()));
 					builder.append("(" + visit(funcDecl.funcDeclArgs()) + ")");
 					builder.append(visit(funcDecl.program()));
 					builder.append("end ");
