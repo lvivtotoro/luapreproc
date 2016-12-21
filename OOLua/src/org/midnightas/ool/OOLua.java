@@ -344,7 +344,7 @@ public class OOLua {
 			if (ctx.extending != null)
 				builder.append("__index=" + ctx.extending.getText() + ",");
 			builder.append("__call=function(cls, ...) local self = setmetatable({}, cls);self._ool_class="
-					+ ctx.name.getText() + ";self:__init__(...);return self;end});");
+					+ ctx.name.getText() + ";self:__init__(...);return self;end});\n");
 			boolean customConstructor = false;
 			for (ClassMemberContext member : ctx.classBlock().classMember()) {
 				if (member instanceof ConstructorMemberContext) {
@@ -363,7 +363,7 @@ public class OOLua {
 						} else
 							continue;
 					}
-					builder.append(visit(((ConstructorMemberContext) member).program()) + "end ");
+					builder.append(visit(((ConstructorMemberContext) member).program()) + "end\n");
 					break;
 				}
 			}
@@ -377,7 +377,7 @@ public class OOLua {
 					} else
 						continue;
 				}
-				builder.append("end ");
+				builder.append("end\n");
 			}
 			for (ClassMemberContext member : ctx.classBlock().classMember()) {
 				if (member instanceof ConstructorMemberContext)
@@ -389,7 +389,7 @@ public class OOLua {
 							+ visit(funcDecl.dotNotation()));
 					builder.append("(" + visit(funcDecl.funcDeclArgs()) + ")");
 					builder.append(visit(funcDecl.program()));
-					builder.append("end ");
+					builder.append("end\n");
 				} else if (member instanceof VarMemberContext) {
 					VarMemberContext var = (VarMemberContext) member;
 					if (var.staticKeyword() == null)
