@@ -462,6 +462,16 @@ public interface OOLListener extends ParseTreeListener {
 	 */
 	void exitConstructorMember(OOLParser.ConstructorMemberContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link OOLParser#newLine}.
+	 * @param ctx the parse tree
+	 */
+	void enterNewLine(OOLParser.NewLineContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link OOLParser#newLine}.
+	 * @param ctx the parse tree
+	 */
+	void exitNewLine(OOLParser.NewLineContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link OOLParser#classBlock}.
 	 * @param ctx the parse tree
 	 */

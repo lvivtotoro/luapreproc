@@ -484,6 +484,18 @@ public class OOLBaseListener implements OOLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterNewLine(OOLParser.NewLineContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNewLine(OOLParser.NewLineContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterClassBlock(OOLParser.ClassBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}

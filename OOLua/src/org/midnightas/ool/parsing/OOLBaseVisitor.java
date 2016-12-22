@@ -290,6 +290,13 @@ public class OOLBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements OO
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitNewLine(OOLParser.NewLineContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitClassBlock(OOLParser.ClassBlockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

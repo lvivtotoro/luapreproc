@@ -277,6 +277,12 @@ public interface OOLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstructorMember(OOLParser.ConstructorMemberContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link OOLParser#newLine}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNewLine(OOLParser.NewLineContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link OOLParser#classBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
