@@ -187,7 +187,7 @@ public class OOLua {
 		}
 
 		public Object visitSetVarExpr(SetVarExprContext ctx) {
-			return (ctx.local() == null ? "" : "local") + " " + visit(ctx.varHeader());
+			return (ctx.local() == null ? "" : "local") + " " + visit(ctx.funcDeclArgs()) + "=" + visit(ctx.funcCallArgs());
 		}
 
 		public Object visitOpExpr(OpExprContext ctx) {
