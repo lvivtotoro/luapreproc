@@ -426,6 +426,8 @@ public class OOLua {
 		options.addOption("f", true, "The file path.");
 		CommandLine commandLine = new DefaultParser().parse(options, args);
 		File file = new File(commandLine.getOptionValue("f"));
+		if(!file.isAbsolute())
+			file = new File(System.getProperty("user.dir"), file.getPath()); // fix to issue #1
 		System.out.println(compile(file.getParentFile().getAbsolutePath(), FileUtils.readFileToString(file)).trim());
 	}
 
