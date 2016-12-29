@@ -1,5 +1,5 @@
-// Generated from OOL.g4 by ANTLR 4.5.3
-package org.midnightas.ool.parsing;
+// Generated from MLua.g4 by ANTLR 4.5.3
+package org.midnightas.mlua.parsing;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class OOLParser extends Parser {
+public class MLuaParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -91,7 +91,7 @@ public class OOLParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "OOL.g4"; }
+	public String getGrammarFileName() { return "MLua.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -102,7 +102,7 @@ public class OOLParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public OOLParser(TokenStream input) {
+	public MLuaParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
@@ -119,15 +119,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterProgram(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitProgram(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitProgram(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitProgram(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitProgram(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -184,15 +184,15 @@ public class OOLParser extends Parser {
 		public ClassThingContext(ProgramThingContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterClassThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterClassThing(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitClassThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitClassThing(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitClassThing(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitClassThing(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -203,15 +203,15 @@ public class OOLParser extends Parser {
 		public FuncDeclThingContext(ProgramThingContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncDeclThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncDeclThing(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncDeclThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncDeclThing(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncDeclThing(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncDeclThing(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -222,15 +222,15 @@ public class OOLParser extends Parser {
 		public StatementThingContext(ProgramThingContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterStatementThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterStatementThing(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitStatementThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitStatementThing(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitStatementThing(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitStatementThing(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -241,15 +241,15 @@ public class OOLParser extends Parser {
 		public IncludeThingContext(ProgramThingContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterIncludeThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterIncludeThing(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitIncludeThing(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitIncludeThing(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitIncludeThing(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitIncludeThing(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -326,15 +326,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_funcDecl; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncDecl(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncDecl(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncDecl(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncDecl(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncDecl(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -393,15 +393,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_varHeader; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterVarHeader(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterVarHeader(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitVarHeader(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitVarHeader(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitVarHeader(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitVarHeader(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -453,15 +453,15 @@ public class OOLParser extends Parser {
 		public WhileStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterWhileStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterWhileStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitWhileStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitWhileStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitWhileStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitWhileStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -481,15 +481,15 @@ public class OOLParser extends Parser {
 		public ForEachStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterForEachStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterForEachStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitForEachStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitForEachStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitForEachStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitForEachStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -512,15 +512,15 @@ public class OOLParser extends Parser {
 		public ForKVStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterForKVStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterForKVStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitForKVStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitForKVStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitForKVStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitForKVStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -537,15 +537,15 @@ public class OOLParser extends Parser {
 		public OolForEachStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterOolForEachStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterOolForEachStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitOolForEachStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitOolForEachStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitOolForEachStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitOolForEachStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -556,15 +556,15 @@ public class OOLParser extends Parser {
 		public ExprStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterExprStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterExprStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitExprStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitExprStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitExprStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitExprStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -572,15 +572,15 @@ public class OOLParser extends Parser {
 		public BreakStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterBreakStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterBreakStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitBreakStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitBreakStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitBreakStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitBreakStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -599,15 +599,15 @@ public class OOLParser extends Parser {
 		public IfStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterIfStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterIfStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitIfStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitIfStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitIfStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitIfStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -618,15 +618,15 @@ public class OOLParser extends Parser {
 		public ReturnStatementContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterReturnStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterReturnStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitReturnStatement(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitReturnStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitReturnStatement(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitReturnStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -830,15 +830,15 @@ public class OOLParser extends Parser {
 		public SetVarExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterSetVarExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterSetVarExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitSetVarExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitSetVarExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitSetVarExpr(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitSetVarExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -852,15 +852,15 @@ public class OOLParser extends Parser {
 		public InstanceofExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterInstanceofExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterInstanceofExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitInstanceofExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitInstanceofExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitInstanceofExpr(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitInstanceofExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -871,15 +871,15 @@ public class OOLParser extends Parser {
 		public SimpleExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterSimpleExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterSimpleExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitSimpleExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitSimpleExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitSimpleExpr(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitSimpleExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -896,15 +896,15 @@ public class OOLParser extends Parser {
 		public OpExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterOpExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterOpExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitOpExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitOpExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitOpExpr(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitOpExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -921,15 +921,15 @@ public class OOLParser extends Parser {
 		public TernaryExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterTernaryExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterTernaryExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitTernaryExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitTernaryExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitTernaryExpr(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitTernaryExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -940,15 +940,15 @@ public class OOLParser extends Parser {
 		public ParenExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterParenExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterParenExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitParenExpr(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitParenExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitParenExpr(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitParenExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1173,15 +1173,15 @@ public class OOLParser extends Parser {
 		public FuncCallSugarContext(ExprAtomSugarContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncCallSugar(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncCallSugar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncCallSugar(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncCallSugar(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncCallSugar(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncCallSugar(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1192,15 +1192,15 @@ public class OOLParser extends Parser {
 		public TableIndexSugarContext(ExprAtomSugarContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterTableIndexSugar(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterTableIndexSugar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitTableIndexSugar(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitTableIndexSugar(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitTableIndexSugar(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitTableIndexSugar(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1271,15 +1271,15 @@ public class OOLParser extends Parser {
 		public IdentifierAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterIdentifierAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterIdentifierAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitIdentifierAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitIdentifierAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitIdentifierAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitIdentifierAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1290,15 +1290,15 @@ public class OOLParser extends Parser {
 		public StringAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterStringAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterStringAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitStringAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitStringAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitStringAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitStringAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1306,15 +1306,15 @@ public class OOLParser extends Parser {
 		public NilAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterNilAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterNilAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitNilAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitNilAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitNilAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitNilAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1325,15 +1325,15 @@ public class OOLParser extends Parser {
 		public NumberAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterNumberAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterNumberAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitNumberAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitNumberAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitNumberAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitNumberAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1344,15 +1344,15 @@ public class OOLParser extends Parser {
 		public FuncAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1363,15 +1363,15 @@ public class OOLParser extends Parser {
 		public TableAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterTableAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterTableAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitTableAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitTableAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitTableAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitTableAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1385,15 +1385,15 @@ public class OOLParser extends Parser {
 		public LambdaAtomContext(ExprAtomContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterLambdaAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterLambdaAtom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitLambdaAtom(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitLambdaAtom(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitLambdaAtom(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitLambdaAtom(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1515,15 +1515,15 @@ public class OOLParser extends Parser {
 		public ArrayTableContext(TableContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterArrayTable(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterArrayTable(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitArrayTable(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitArrayTable(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitArrayTable(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitArrayTable(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1543,15 +1543,15 @@ public class OOLParser extends Parser {
 		public KeyTableContext(TableContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterKeyTable(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterKeyTable(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitKeyTable(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitKeyTable(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitKeyTable(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitKeyTable(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1680,15 +1680,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dotNotation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterDotNotation(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterDotNotation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitDotNotation(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitDotNotation(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitDotNotation(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitDotNotation(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1785,15 +1785,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dotNotationSection; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterDotNotationSection(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterDotNotationSection(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitDotNotationSection(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitDotNotationSection(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitDotNotationSection(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitDotNotationSection(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1845,15 +1845,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dotNotationSeperator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterDotNotationSeperator(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterDotNotationSeperator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitDotNotationSeperator(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitDotNotationSeperator(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitDotNotationSeperator(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitDotNotationSeperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1903,15 +1903,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classCreate; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterClassCreate(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterClassCreate(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitClassCreate(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitClassCreate(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitClassCreate(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitClassCreate(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1978,15 +1978,15 @@ public class OOLParser extends Parser {
 		public FuncMemberContext(ClassMemberContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncMember(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncMember(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncMember(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncMember(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncMember(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncMember(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2000,15 +2000,15 @@ public class OOLParser extends Parser {
 		public ConstructorMemberContext(ClassMemberContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterConstructorMember(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterConstructorMember(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitConstructorMember(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitConstructorMember(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitConstructorMember(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitConstructorMember(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2025,15 +2025,15 @@ public class OOLParser extends Parser {
 		public VarMemberContext(ClassMemberContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterVarMember(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterVarMember(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitVarMember(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitVarMember(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitVarMember(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitVarMember(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2132,15 +2132,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterClassBlock(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterClassBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitClassBlock(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitClassBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitClassBlock(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitClassBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2192,15 +2192,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_funcCallArgs; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncCallArgs(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncCallArgs(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncCallArgs(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncCallArgs(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncCallArgs(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncCallArgs(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2254,11 +2254,11 @@ public class OOLParser extends Parser {
 	}
 
 	public static class FuncDeclArgsContext extends ParserRuleContext {
-		public List<IdentifierContext> identifier() {
-			return getRuleContexts(IdentifierContext.class);
+		public List<DotNotationContext> dotNotation() {
+			return getRuleContexts(DotNotationContext.class);
 		}
-		public IdentifierContext identifier(int i) {
-			return getRuleContext(IdentifierContext.class,i);
+		public DotNotationContext dotNotation(int i) {
+			return getRuleContext(DotNotationContext.class,i);
 		}
 		public FuncDeclArgsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2266,15 +2266,15 @@ public class OOLParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_funcDeclArgs; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterFuncDeclArgs(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterFuncDeclArgs(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitFuncDeclArgs(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitFuncDeclArgs(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitFuncDeclArgs(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitFuncDeclArgs(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2288,10 +2288,10 @@ public class OOLParser extends Parser {
 			{
 			setState(317);
 			_la = _input.LA(1);
-			if (_la==IDENTIFIER) {
+			if (_la==T__3 || _la==IDENTIFIER) {
 				{
 				setState(309);
-				identifier();
+				dotNotation();
 				setState(314);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -2301,7 +2301,7 @@ public class OOLParser extends Parser {
 					setState(310);
 					match(T__14);
 					setState(311);
-					identifier();
+					dotNotation();
 					}
 					}
 					setState(316);
@@ -2325,22 +2325,22 @@ public class OOLParser extends Parser {
 	}
 
 	public static class IdentifierContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(OOLParser.IDENTIFIER, 0); }
+		public TerminalNode IDENTIFIER() { return getToken(MLuaParser.IDENTIFIER, 0); }
 		public IdentifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_identifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterIdentifier(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterIdentifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitIdentifier(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitIdentifier(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitIdentifier(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitIdentifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2369,22 +2369,22 @@ public class OOLParser extends Parser {
 	public static class StringContext extends ParserRuleContext {
 		public String value;
 		public Token STRING;
-		public TerminalNode STRING() { return getToken(OOLParser.STRING, 0); }
+		public TerminalNode STRING() { return getToken(MLuaParser.STRING, 0); }
 		public StringContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterString(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterString(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitString(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitString(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitString(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitString(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2415,23 +2415,23 @@ public class OOLParser extends Parser {
 		public Double value;
 		public Token UNARY_MINUS;
 		public Token NUMBER;
-		public TerminalNode NUMBER() { return getToken(OOLParser.NUMBER, 0); }
-		public TerminalNode UNARY_MINUS() { return getToken(OOLParser.UNARY_MINUS, 0); }
+		public TerminalNode NUMBER() { return getToken(MLuaParser.NUMBER, 0); }
+		public TerminalNode UNARY_MINUS() { return getToken(MLuaParser.UNARY_MINUS, 0); }
 		public NumberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_number; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterNumber(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitNumber(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitNumber(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitNumber(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitNumber(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2469,22 +2469,22 @@ public class OOLParser extends Parser {
 	}
 
 	public static class LocalContext extends ParserRuleContext {
-		public TerminalNode LOCAL() { return getToken(OOLParser.LOCAL, 0); }
+		public TerminalNode LOCAL() { return getToken(MLuaParser.LOCAL, 0); }
 		public LocalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_local; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterLocal(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterLocal(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitLocal(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitLocal(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitLocal(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitLocal(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2511,22 +2511,22 @@ public class OOLParser extends Parser {
 	}
 
 	public static class StaticKeywordContext extends ParserRuleContext {
-		public TerminalNode STATIC() { return getToken(OOLParser.STATIC, 0); }
+		public TerminalNode STATIC() { return getToken(MLuaParser.STATIC, 0); }
 		public StaticKeywordContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_staticKeyword; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterStaticKeyword(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterStaticKeyword(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitStaticKeyword(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitStaticKeyword(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitStaticKeyword(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitStaticKeyword(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2553,22 +2553,22 @@ public class OOLParser extends Parser {
 	}
 
 	public static class LenOperatorContext extends ParserRuleContext {
-		public TerminalNode LEN_OPERATOR() { return getToken(OOLParser.LEN_OPERATOR, 0); }
+		public TerminalNode LEN_OPERATOR() { return getToken(MLuaParser.LEN_OPERATOR, 0); }
 		public LenOperatorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_lenOperator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).enterLenOperator(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).enterLenOperator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof OOLListener ) ((OOLListener)listener).exitLenOperator(this);
+			if ( listener instanceof MLuaListener ) ((MLuaListener)listener).exitLenOperator(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof OOLVisitor ) return ((OOLVisitor<? extends T>)visitor).visitLenOperator(this);
+			if ( visitor instanceof MLuaVisitor ) return ((MLuaVisitor<? extends T>)visitor).visitLenOperator(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2728,17 +2728,17 @@ public class OOLParser extends Parser {
 		"\2\u012d\u0132\5\f\7\2\u012e\u012f\7\21\2\2\u012f\u0131\5\f\7\2\u0130"+
 		"\u012e\3\2\2\2\u0131\u0134\3\2\2\2\u0132\u0130\3\2\2\2\u0132\u0133\3\2"+
 		"\2\2\u0133\u0136\3\2\2\2\u0134\u0132\3\2\2\2\u0135\u012d\3\2\2\2\u0135"+
-		"\u0136\3\2\2\2\u0136!\3\2\2\2\u0137\u013c\5$\23\2\u0138\u0139\7\21\2\2"+
-		"\u0139\u013b\5$\23\2\u013a\u0138\3\2\2\2\u013b\u013e\3\2\2\2\u013c\u013a"+
-		"\3\2\2\2\u013c\u013d\3\2\2\2\u013d\u0140\3\2\2\2\u013e\u013c\3\2\2\2\u013f"+
-		"\u0137\3\2\2\2\u013f\u0140\3\2\2\2\u0140#\3\2\2\2\u0141\u0142\7\64\2\2"+
-		"\u0142%\3\2\2\2\u0143\u0144\7\66\2\2\u0144\u0145\b\24\1\2\u0145\'\3\2"+
-		"\2\2\u0146\u0148\7\60\2\2\u0147\u0146\3\2\2\2\u0147\u0148\3\2\2\2\u0148"+
-		"\u0149\3\2\2\2\u0149\u014a\7\65\2\2\u014a\u014b\b\25\1\2\u014b)\3\2\2"+
-		"\2\u014c\u014d\7\62\2\2\u014d+\3\2\2\2\u014e\u014f\7\63\2\2\u014f-\3\2"+
-		"\2\2\u0150\u0151\7\61\2\2\u0151/\3\2\2\2\"\63=AVj\u0086\u008b\u0095\u00ac"+
-		"\u00ae\u00b9\u00be\u00c9\u00d1\u00d4\u00e2\u00e5\u00e8\u00ef\u00f4\u00fa"+
-		"\u0102\u010b\u0112\u011b\u0125\u012a\u0132\u0135\u013c\u013f\u0147";
+		"\u0136\3\2\2\2\u0136!\3\2\2\2\u0137\u013c\5\24\13\2\u0138\u0139\7\21\2"+
+		"\2\u0139\u013b\5\24\13\2\u013a\u0138\3\2\2\2\u013b\u013e\3\2\2\2\u013c"+
+		"\u013a\3\2\2\2\u013c\u013d\3\2\2\2\u013d\u0140\3\2\2\2\u013e\u013c\3\2"+
+		"\2\2\u013f\u0137\3\2\2\2\u013f\u0140\3\2\2\2\u0140#\3\2\2\2\u0141\u0142"+
+		"\7\64\2\2\u0142%\3\2\2\2\u0143\u0144\7\66\2\2\u0144\u0145\b\24\1\2\u0145"+
+		"\'\3\2\2\2\u0146\u0148\7\60\2\2\u0147\u0146\3\2\2\2\u0147\u0148\3\2\2"+
+		"\2\u0148\u0149\3\2\2\2\u0149\u014a\7\65\2\2\u014a\u014b\b\25\1\2\u014b"+
+		")\3\2\2\2\u014c\u014d\7\62\2\2\u014d+\3\2\2\2\u014e\u014f\7\63\2\2\u014f"+
+		"-\3\2\2\2\u0150\u0151\7\61\2\2\u0151/\3\2\2\2\"\63=AVj\u0086\u008b\u0095"+
+		"\u00ac\u00ae\u00b9\u00be\u00c9\u00d1\u00d4\u00e2\u00e5\u00e8\u00ef\u00f4"+
+		"\u00fa\u0102\u010b\u0112\u011b\u0125\u012a\u0132\u0135\u013c\u013f\u0147";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

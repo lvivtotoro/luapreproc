@@ -1,5 +1,5 @@
-// Generated from OOL.g4 by ANTLR 4.5.3
-package org.midnightas.ool.parsing;
+// Generated from MLua.g4 by ANTLR 4.5.3
+package org.midnightas.mlua.parsing;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class OOLLexer extends Lexer {
+public class MLuaLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -91,13 +91,13 @@ public class OOLLexer extends Lexer {
 	}
 
 
-	public OOLLexer(CharStream input) {
+	public MLuaLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "OOL.g4"; }
+	public String getGrammarFileName() { return "MLua.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

@@ -1,4 +1,4 @@
-package org.midnightas.ool;
+package org.midnightas.mlua;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,82 +14,82 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.io.FileUtils;
-import org.midnightas.ool.parsing.OOLBaseVisitor;
-import org.midnightas.ool.parsing.OOLLexer;
-import org.midnightas.ool.parsing.OOLParser;
-import org.midnightas.ool.parsing.OOLParser.ArrayTableContext;
-import org.midnightas.ool.parsing.OOLParser.BreakStatementContext;
-import org.midnightas.ool.parsing.OOLParser.ClassCreateContext;
-import org.midnightas.ool.parsing.OOLParser.ClassMemberContext;
-import org.midnightas.ool.parsing.OOLParser.ClassThingContext;
-import org.midnightas.ool.parsing.OOLParser.ConstructorMemberContext;
-import org.midnightas.ool.parsing.OOLParser.DotNotationContext;
-import org.midnightas.ool.parsing.OOLParser.DotNotationSectionContext;
-import org.midnightas.ool.parsing.OOLParser.DotNotationSeperatorContext;
-import org.midnightas.ool.parsing.OOLParser.ExprAtomSugarContext;
-import org.midnightas.ool.parsing.OOLParser.ExprStatementContext;
-import org.midnightas.ool.parsing.OOLParser.ForEachStatementContext;
-import org.midnightas.ool.parsing.OOLParser.ForKVStatementContext;
-import org.midnightas.ool.parsing.OOLParser.FuncAtomContext;
-import org.midnightas.ool.parsing.OOLParser.FuncCallArgsContext;
-import org.midnightas.ool.parsing.OOLParser.FuncCallSugarContext;
-import org.midnightas.ool.parsing.OOLParser.FuncDeclArgsContext;
-import org.midnightas.ool.parsing.OOLParser.FuncDeclContext;
-import org.midnightas.ool.parsing.OOLParser.FuncDeclThingContext;
-import org.midnightas.ool.parsing.OOLParser.FuncMemberContext;
-import org.midnightas.ool.parsing.OOLParser.IdentifierAtomContext;
-import org.midnightas.ool.parsing.OOLParser.IdentifierContext;
-import org.midnightas.ool.parsing.OOLParser.IfStatementContext;
-import org.midnightas.ool.parsing.OOLParser.IncludeThingContext;
-import org.midnightas.ool.parsing.OOLParser.InstanceofExprContext;
-import org.midnightas.ool.parsing.OOLParser.KeyTableContext;
-import org.midnightas.ool.parsing.OOLParser.LambdaAtomContext;
-import org.midnightas.ool.parsing.OOLParser.NilAtomContext;
-import org.midnightas.ool.parsing.OOLParser.NumberAtomContext;
-import org.midnightas.ool.parsing.OOLParser.NumberContext;
-import org.midnightas.ool.parsing.OOLParser.OolForEachStatementContext;
-import org.midnightas.ool.parsing.OOLParser.OpExprContext;
-import org.midnightas.ool.parsing.OOLParser.ParenExprContext;
-import org.midnightas.ool.parsing.OOLParser.ProgramContext;
-import org.midnightas.ool.parsing.OOLParser.ReturnStatementContext;
-import org.midnightas.ool.parsing.OOLParser.SetVarExprContext;
-import org.midnightas.ool.parsing.OOLParser.SimpleExprContext;
-import org.midnightas.ool.parsing.OOLParser.StatementThingContext;
-import org.midnightas.ool.parsing.OOLParser.StringAtomContext;
-import org.midnightas.ool.parsing.OOLParser.StringContext;
-import org.midnightas.ool.parsing.OOLParser.TableAtomContext;
-import org.midnightas.ool.parsing.OOLParser.TableIndexSugarContext;
-import org.midnightas.ool.parsing.OOLParser.TernaryExprContext;
-import org.midnightas.ool.parsing.OOLParser.VarHeaderContext;
-import org.midnightas.ool.parsing.OOLParser.VarMemberContext;
-import org.midnightas.ool.parsing.OOLParser.WhileStatementContext;
+import org.midnightas.mlua.parsing.MLuaBaseVisitor;
+import org.midnightas.mlua.parsing.MLuaLexer;
+import org.midnightas.mlua.parsing.MLuaParser;
+import org.midnightas.mlua.parsing.MLuaParser.ArrayTableContext;
+import org.midnightas.mlua.parsing.MLuaParser.BreakStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.ClassCreateContext;
+import org.midnightas.mlua.parsing.MLuaParser.ClassMemberContext;
+import org.midnightas.mlua.parsing.MLuaParser.ClassThingContext;
+import org.midnightas.mlua.parsing.MLuaParser.ConstructorMemberContext;
+import org.midnightas.mlua.parsing.MLuaParser.DotNotationContext;
+import org.midnightas.mlua.parsing.MLuaParser.DotNotationSectionContext;
+import org.midnightas.mlua.parsing.MLuaParser.DotNotationSeperatorContext;
+import org.midnightas.mlua.parsing.MLuaParser.ExprAtomSugarContext;
+import org.midnightas.mlua.parsing.MLuaParser.ExprStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.ForEachStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.ForKVStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncCallArgsContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncCallSugarContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncDeclArgsContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncDeclContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncDeclThingContext;
+import org.midnightas.mlua.parsing.MLuaParser.FuncMemberContext;
+import org.midnightas.mlua.parsing.MLuaParser.IdentifierAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.IdentifierContext;
+import org.midnightas.mlua.parsing.MLuaParser.IfStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.IncludeThingContext;
+import org.midnightas.mlua.parsing.MLuaParser.InstanceofExprContext;
+import org.midnightas.mlua.parsing.MLuaParser.KeyTableContext;
+import org.midnightas.mlua.parsing.MLuaParser.LambdaAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.NilAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.NumberAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.NumberContext;
+import org.midnightas.mlua.parsing.MLuaParser.OolForEachStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.OpExprContext;
+import org.midnightas.mlua.parsing.MLuaParser.ParenExprContext;
+import org.midnightas.mlua.parsing.MLuaParser.ProgramContext;
+import org.midnightas.mlua.parsing.MLuaParser.ReturnStatementContext;
+import org.midnightas.mlua.parsing.MLuaParser.SetVarExprContext;
+import org.midnightas.mlua.parsing.MLuaParser.SimpleExprContext;
+import org.midnightas.mlua.parsing.MLuaParser.StatementThingContext;
+import org.midnightas.mlua.parsing.MLuaParser.StringAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.StringContext;
+import org.midnightas.mlua.parsing.MLuaParser.TableAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.TableIndexSugarContext;
+import org.midnightas.mlua.parsing.MLuaParser.TernaryExprContext;
+import org.midnightas.mlua.parsing.MLuaParser.VarHeaderContext;
+import org.midnightas.mlua.parsing.MLuaParser.VarMemberContext;
+import org.midnightas.mlua.parsing.MLuaParser.WhileStatementContext;
 
 /*
  * Changelog:
  *   Beta 1.1:
  *   - Added instanceof keyword.
- *   - Disallow variable names that start with _ool_.
+ *   - Disallow variable names that start with _mlua_.
  *   - Added foreach keyword
  *   - Fixed include issue
  */
-public class OOLua {
+public class MidnightasLua {
 
 	public static HashMap<String, String> builtinIncludes = new HashMap<String, String>();
 
 	static {
 		for (String include : new String[] { "string" })
 			builtinIncludes.put(include,
-					new BufferedReader(new InputStreamReader(OOLua.class.getResourceAsStream("/" + include + ".ool")))
+					new BufferedReader(new InputStreamReader(MidnightasLua.class.getResourceAsStream("/" + include + ".mlua")))
 							.lines().collect(Collectors.joining("\n")) + " ");
 	}
 
 	public static String compile(String path, String code) {
-		OOLParser parser = new OOLParser(new CommonTokenStream(new OOLLexer(new ANTLRInputStream(code))));
+		MLuaParser parser = new MLuaParser(new CommonTokenStream(new MLuaLexer(new ANTLRInputStream(code))));
 		parser.setBuildParseTree(true);
 		return ((String) new Visitor(path).visit(parser.program()));
 	}
 
-	static class Visitor extends OOLBaseVisitor<Object> {
+	static class Visitor extends MLuaBaseVisitor<Object> {
 
 		public String filePath;
 
@@ -169,7 +169,7 @@ public class OOLua {
 
 		public Object visitOolForEachStatement(OolForEachStatementContext ctx) {
 			String name = (String) visit(ctx.identifier());
-			return "for " + name + "_ool_i," + name + " in pairs(" + visit(ctx.expr()) + ")do " + visit(ctx.program())
+			return "for " + name + "_mlua_i," + name + " in pairs(" + visit(ctx.expr()) + ")do " + visit(ctx.program())
 					+ "end;";
 		}
 
@@ -250,7 +250,7 @@ public class OOLua {
 		}
 
 		public Object visitInstanceofExpr(InstanceofExprContext ctx) {
-			return visit(ctx.expr()) + "._ool_class==" + visit(ctx.dotNotation());
+			return visit(ctx.expr()) + "._mlua_class==" + visit(ctx.dotNotation());
 		}
 
 		public Object visitTableIndexSugar(TableIndexSugarContext ctx) {
@@ -318,10 +318,10 @@ public class OOLua {
 		public Object visitDotNotationSection(DotNotationSectionContext ctx) {
 			StringBuilder builder = new StringBuilder();
 			builder.append(visit(ctx.dotNotationSeperator()));
-			if (ctx.identifier().getText().startsWith("_ool_") || ctx.identifier().getText().endsWith("_ool_")) {
+			if (ctx.identifier().getText().startsWith("_mlua_") || ctx.identifier().getText().endsWith("_mlua_")) {
 				Token t = ctx.identifier().start;
 				System.err.println("line " + t.getLine() + ":" + t.getCharPositionInLine()
-						+ " Variable names starting or ending with _ool_ are illegal.");
+						+ " Variable names starting or ending with _mlua_ are illegal.");
 				return builder.toString();
 			}
 			builder.append(visit(ctx.identifier()));
@@ -343,7 +343,7 @@ public class OOLua {
 			builder.append("setmetatable(" + ctx.name.getText() + ", {");
 			if (ctx.extending != null)
 				builder.append("__index=" + ctx.extending.getText() + ",");
-			builder.append("__call=function(cls, ...) local self = setmetatable({}, cls);self._ool_class="
+			builder.append("__call=function(cls, ...) local self = setmetatable({}, cls);self._mlua_class="
 					+ ctx.name.getText() + ";self:__init__(...);return self;end});\n");
 			boolean customConstructor = false;
 			for (ClassMemberContext member : ctx.classBlock().classMember()) {

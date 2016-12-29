@@ -1,592 +1,592 @@
-// Generated from OOL.g4 by ANTLR 4.5.3
-package org.midnightas.ool.parsing;
+// Generated from MLua.g4 by ANTLR 4.5.3
+package org.midnightas.mlua.parsing;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link OOLListener},
+ * This class provides an empty implementation of {@link MLuaListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
-public class OOLBaseListener implements OOLListener {
+public class MLuaBaseListener implements MLuaListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(OOLParser.ProgramContext ctx) { }
+	@Override public void enterProgram(MLuaParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(OOLParser.ProgramContext ctx) { }
+	@Override public void exitProgram(MLuaParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncDeclThing(OOLParser.FuncDeclThingContext ctx) { }
+	@Override public void enterFuncDeclThing(MLuaParser.FuncDeclThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncDeclThing(OOLParser.FuncDeclThingContext ctx) { }
+	@Override public void exitFuncDeclThing(MLuaParser.FuncDeclThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatementThing(OOLParser.StatementThingContext ctx) { }
+	@Override public void enterStatementThing(MLuaParser.StatementThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatementThing(OOLParser.StatementThingContext ctx) { }
+	@Override public void exitStatementThing(MLuaParser.StatementThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassThing(OOLParser.ClassThingContext ctx) { }
+	@Override public void enterClassThing(MLuaParser.ClassThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassThing(OOLParser.ClassThingContext ctx) { }
+	@Override public void exitClassThing(MLuaParser.ClassThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIncludeThing(OOLParser.IncludeThingContext ctx) { }
+	@Override public void enterIncludeThing(MLuaParser.IncludeThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIncludeThing(OOLParser.IncludeThingContext ctx) { }
+	@Override public void exitIncludeThing(MLuaParser.IncludeThingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncDecl(OOLParser.FuncDeclContext ctx) { }
+	@Override public void enterFuncDecl(MLuaParser.FuncDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncDecl(OOLParser.FuncDeclContext ctx) { }
+	@Override public void exitFuncDecl(MLuaParser.FuncDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVarHeader(OOLParser.VarHeaderContext ctx) { }
+	@Override public void enterVarHeader(MLuaParser.VarHeaderContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVarHeader(OOLParser.VarHeaderContext ctx) { }
+	@Override public void exitVarHeader(MLuaParser.VarHeaderContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExprStatement(OOLParser.ExprStatementContext ctx) { }
+	@Override public void enterExprStatement(MLuaParser.ExprStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExprStatement(OOLParser.ExprStatementContext ctx) { }
+	@Override public void exitExprStatement(MLuaParser.ExprStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfStatement(OOLParser.IfStatementContext ctx) { }
+	@Override public void enterIfStatement(MLuaParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfStatement(OOLParser.IfStatementContext ctx) { }
+	@Override public void exitIfStatement(MLuaParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStatement(OOLParser.WhileStatementContext ctx) { }
+	@Override public void enterWhileStatement(MLuaParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileStatement(OOLParser.WhileStatementContext ctx) { }
+	@Override public void exitWhileStatement(MLuaParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBreakStatement(OOLParser.BreakStatementContext ctx) { }
+	@Override public void enterBreakStatement(MLuaParser.BreakStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBreakStatement(OOLParser.BreakStatementContext ctx) { }
+	@Override public void exitBreakStatement(MLuaParser.BreakStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForKVStatement(OOLParser.ForKVStatementContext ctx) { }
+	@Override public void enterForKVStatement(MLuaParser.ForKVStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitForKVStatement(OOLParser.ForKVStatementContext ctx) { }
+	@Override public void exitForKVStatement(MLuaParser.ForKVStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForEachStatement(OOLParser.ForEachStatementContext ctx) { }
+	@Override public void enterForEachStatement(MLuaParser.ForEachStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitForEachStatement(OOLParser.ForEachStatementContext ctx) { }
+	@Override public void exitForEachStatement(MLuaParser.ForEachStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOolForEachStatement(OOLParser.OolForEachStatementContext ctx) { }
+	@Override public void enterOolForEachStatement(MLuaParser.OolForEachStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOolForEachStatement(OOLParser.OolForEachStatementContext ctx) { }
+	@Override public void exitOolForEachStatement(MLuaParser.OolForEachStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnStatement(OOLParser.ReturnStatementContext ctx) { }
+	@Override public void enterReturnStatement(MLuaParser.ReturnStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnStatement(OOLParser.ReturnStatementContext ctx) { }
+	@Override public void exitReturnStatement(MLuaParser.ReturnStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSetVarExpr(OOLParser.SetVarExprContext ctx) { }
+	@Override public void enterSetVarExpr(MLuaParser.SetVarExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSetVarExpr(OOLParser.SetVarExprContext ctx) { }
+	@Override public void exitSetVarExpr(MLuaParser.SetVarExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInstanceofExpr(OOLParser.InstanceofExprContext ctx) { }
+	@Override public void enterInstanceofExpr(MLuaParser.InstanceofExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInstanceofExpr(OOLParser.InstanceofExprContext ctx) { }
+	@Override public void exitInstanceofExpr(MLuaParser.InstanceofExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSimpleExpr(OOLParser.SimpleExprContext ctx) { }
+	@Override public void enterSimpleExpr(MLuaParser.SimpleExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSimpleExpr(OOLParser.SimpleExprContext ctx) { }
+	@Override public void exitSimpleExpr(MLuaParser.SimpleExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOpExpr(OOLParser.OpExprContext ctx) { }
+	@Override public void enterOpExpr(MLuaParser.OpExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOpExpr(OOLParser.OpExprContext ctx) { }
+	@Override public void exitOpExpr(MLuaParser.OpExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTernaryExpr(OOLParser.TernaryExprContext ctx) { }
+	@Override public void enterTernaryExpr(MLuaParser.TernaryExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTernaryExpr(OOLParser.TernaryExprContext ctx) { }
+	@Override public void exitTernaryExpr(MLuaParser.TernaryExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParenExpr(OOLParser.ParenExprContext ctx) { }
+	@Override public void enterParenExpr(MLuaParser.ParenExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParenExpr(OOLParser.ParenExprContext ctx) { }
+	@Override public void exitParenExpr(MLuaParser.ParenExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTableIndexSugar(OOLParser.TableIndexSugarContext ctx) { }
+	@Override public void enterTableIndexSugar(MLuaParser.TableIndexSugarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTableIndexSugar(OOLParser.TableIndexSugarContext ctx) { }
+	@Override public void exitTableIndexSugar(MLuaParser.TableIndexSugarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncCallSugar(OOLParser.FuncCallSugarContext ctx) { }
+	@Override public void enterFuncCallSugar(MLuaParser.FuncCallSugarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncCallSugar(OOLParser.FuncCallSugarContext ctx) { }
+	@Override public void exitFuncCallSugar(MLuaParser.FuncCallSugarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNumberAtom(OOLParser.NumberAtomContext ctx) { }
+	@Override public void enterNumberAtom(MLuaParser.NumberAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNumberAtom(OOLParser.NumberAtomContext ctx) { }
+	@Override public void exitNumberAtom(MLuaParser.NumberAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTableAtom(OOLParser.TableAtomContext ctx) { }
+	@Override public void enterTableAtom(MLuaParser.TableAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTableAtom(OOLParser.TableAtomContext ctx) { }
+	@Override public void exitTableAtom(MLuaParser.TableAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIdentifierAtom(OOLParser.IdentifierAtomContext ctx) { }
+	@Override public void enterIdentifierAtom(MLuaParser.IdentifierAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIdentifierAtom(OOLParser.IdentifierAtomContext ctx) { }
+	@Override public void exitIdentifierAtom(MLuaParser.IdentifierAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStringAtom(OOLParser.StringAtomContext ctx) { }
+	@Override public void enterStringAtom(MLuaParser.StringAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStringAtom(OOLParser.StringAtomContext ctx) { }
+	@Override public void exitStringAtom(MLuaParser.StringAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncAtom(OOLParser.FuncAtomContext ctx) { }
+	@Override public void enterFuncAtom(MLuaParser.FuncAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncAtom(OOLParser.FuncAtomContext ctx) { }
+	@Override public void exitFuncAtom(MLuaParser.FuncAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLambdaAtom(OOLParser.LambdaAtomContext ctx) { }
+	@Override public void enterLambdaAtom(MLuaParser.LambdaAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLambdaAtom(OOLParser.LambdaAtomContext ctx) { }
+	@Override public void exitLambdaAtom(MLuaParser.LambdaAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNilAtom(OOLParser.NilAtomContext ctx) { }
+	@Override public void enterNilAtom(MLuaParser.NilAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNilAtom(OOLParser.NilAtomContext ctx) { }
+	@Override public void exitNilAtom(MLuaParser.NilAtomContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayTable(OOLParser.ArrayTableContext ctx) { }
+	@Override public void enterArrayTable(MLuaParser.ArrayTableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayTable(OOLParser.ArrayTableContext ctx) { }
+	@Override public void exitArrayTable(MLuaParser.ArrayTableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKeyTable(OOLParser.KeyTableContext ctx) { }
+	@Override public void enterKeyTable(MLuaParser.KeyTableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKeyTable(OOLParser.KeyTableContext ctx) { }
+	@Override public void exitKeyTable(MLuaParser.KeyTableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDotNotation(OOLParser.DotNotationContext ctx) { }
+	@Override public void enterDotNotation(MLuaParser.DotNotationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDotNotation(OOLParser.DotNotationContext ctx) { }
+	@Override public void exitDotNotation(MLuaParser.DotNotationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDotNotationSection(OOLParser.DotNotationSectionContext ctx) { }
+	@Override public void enterDotNotationSection(MLuaParser.DotNotationSectionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDotNotationSection(OOLParser.DotNotationSectionContext ctx) { }
+	@Override public void exitDotNotationSection(MLuaParser.DotNotationSectionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDotNotationSeperator(OOLParser.DotNotationSeperatorContext ctx) { }
+	@Override public void enterDotNotationSeperator(MLuaParser.DotNotationSeperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDotNotationSeperator(OOLParser.DotNotationSeperatorContext ctx) { }
+	@Override public void exitDotNotationSeperator(MLuaParser.DotNotationSeperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassCreate(OOLParser.ClassCreateContext ctx) { }
+	@Override public void enterClassCreate(MLuaParser.ClassCreateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassCreate(OOLParser.ClassCreateContext ctx) { }
+	@Override public void exitClassCreate(MLuaParser.ClassCreateContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVarMember(OOLParser.VarMemberContext ctx) { }
+	@Override public void enterVarMember(MLuaParser.VarMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVarMember(OOLParser.VarMemberContext ctx) { }
+	@Override public void exitVarMember(MLuaParser.VarMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncMember(OOLParser.FuncMemberContext ctx) { }
+	@Override public void enterFuncMember(MLuaParser.FuncMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncMember(OOLParser.FuncMemberContext ctx) { }
+	@Override public void exitFuncMember(MLuaParser.FuncMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstructorMember(OOLParser.ConstructorMemberContext ctx) { }
+	@Override public void enterConstructorMember(MLuaParser.ConstructorMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstructorMember(OOLParser.ConstructorMemberContext ctx) { }
+	@Override public void exitConstructorMember(MLuaParser.ConstructorMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassBlock(OOLParser.ClassBlockContext ctx) { }
+	@Override public void enterClassBlock(MLuaParser.ClassBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassBlock(OOLParser.ClassBlockContext ctx) { }
+	@Override public void exitClassBlock(MLuaParser.ClassBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncCallArgs(OOLParser.FuncCallArgsContext ctx) { }
+	@Override public void enterFuncCallArgs(MLuaParser.FuncCallArgsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncCallArgs(OOLParser.FuncCallArgsContext ctx) { }
+	@Override public void exitFuncCallArgs(MLuaParser.FuncCallArgsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFuncDeclArgs(OOLParser.FuncDeclArgsContext ctx) { }
+	@Override public void enterFuncDeclArgs(MLuaParser.FuncDeclArgsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFuncDeclArgs(OOLParser.FuncDeclArgsContext ctx) { }
+	@Override public void exitFuncDeclArgs(MLuaParser.FuncDeclArgsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIdentifier(OOLParser.IdentifierContext ctx) { }
+	@Override public void enterIdentifier(MLuaParser.IdentifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIdentifier(OOLParser.IdentifierContext ctx) { }
+	@Override public void exitIdentifier(MLuaParser.IdentifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterString(OOLParser.StringContext ctx) { }
+	@Override public void enterString(MLuaParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitString(OOLParser.StringContext ctx) { }
+	@Override public void exitString(MLuaParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNumber(OOLParser.NumberContext ctx) { }
+	@Override public void enterNumber(MLuaParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNumber(OOLParser.NumberContext ctx) { }
+	@Override public void exitNumber(MLuaParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLocal(OOLParser.LocalContext ctx) { }
+	@Override public void enterLocal(MLuaParser.LocalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLocal(OOLParser.LocalContext ctx) { }
+	@Override public void exitLocal(MLuaParser.LocalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStaticKeyword(OOLParser.StaticKeywordContext ctx) { }
+	@Override public void enterStaticKeyword(MLuaParser.StaticKeywordContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStaticKeyword(OOLParser.StaticKeywordContext ctx) { }
+	@Override public void exitStaticKeyword(MLuaParser.StaticKeywordContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLenOperator(OOLParser.LenOperatorContext ctx) { }
+	@Override public void enterLenOperator(MLuaParser.LenOperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLenOperator(OOLParser.LenOperatorContext ctx) { }
+	@Override public void exitLenOperator(MLuaParser.LenOperatorContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
