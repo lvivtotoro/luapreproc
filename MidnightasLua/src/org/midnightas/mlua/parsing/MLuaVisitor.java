@@ -106,6 +106,13 @@ public interface MLuaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitOolForEachStatement(MLuaParser.OolForEachStatementContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code switchStatement}
+	 * labeled alternative in {@link MLuaParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSwitchStatement(MLuaParser.SwitchStatementContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code returnStatement}
 	 * labeled alternative in {@link MLuaParser#statement}.
 	 * @param ctx the parse tree

@@ -170,6 +170,18 @@ public interface MLuaListener extends ParseTreeListener {
 	 */
 	void exitOolForEachStatement(MLuaParser.OolForEachStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code switchStatement}
+	 * labeled alternative in {@link MLuaParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterSwitchStatement(MLuaParser.SwitchStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code switchStatement}
+	 * labeled alternative in {@link MLuaParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitSwitchStatement(MLuaParser.SwitchStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code returnStatement}
 	 * labeled alternative in {@link MLuaParser#statement}.
 	 * @param ctx the parse tree

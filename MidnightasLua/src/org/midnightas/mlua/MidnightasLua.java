@@ -57,6 +57,7 @@ import org.midnightas.mlua.parsing.MLuaParser.SimpleExprContext;
 import org.midnightas.mlua.parsing.MLuaParser.StatementThingContext;
 import org.midnightas.mlua.parsing.MLuaParser.StringAtomContext;
 import org.midnightas.mlua.parsing.MLuaParser.StringContext;
+import org.midnightas.mlua.parsing.MLuaParser.SwitchStatementContext;
 import org.midnightas.mlua.parsing.MLuaParser.TableAtomContext;
 import org.midnightas.mlua.parsing.MLuaParser.TableIndexSugarContext;
 import org.midnightas.mlua.parsing.MLuaParser.TernaryExprContext;
@@ -76,29 +77,44 @@ public class MidnightasLua {
 
 	public static HashMap<String, String> builtinIncludes = new HashMap<String, String>();
 
+	public static String SWITCH_BODY;
+
 	static {
+		SWITCH_BODY = "function _mlua_switch(t)t.case=function(self,x)local f=self[x] or self.default;if f then if type(f)==\"function\" then f(x,self)else error(\"case \"..tostring(x)..\" not a function\")end end end return t end"
+				+ "\n";
 		for (String include : new String[] { "string" })
 			builtinIncludes.put(include,
-					new BufferedReader(new InputStreamReader(MidnightasLua.class.getResourceAsStream("/" + include + ".mlua")))
-							.lines().collect(Collectors.joining("\n")) + " ");
+					new BufferedReader(
+							new InputStreamReader(MidnightasLua.class.getResourceAsStream("/" + include + ".mlua")))
+									.lines().collect(Collectors.joining("\n"))
+							+ " ");
 	}
 
 	public static String compile(String path, String code) {
 		MLuaParser parser = new MLuaParser(new CommonTokenStream(new MLuaLexer(new ANTLRInputStream(code))));
 		parser.setBuildParseTree(true);
-		return ((String) new Visitor(path).visit(parser.program()));
+		Visitor visitor = new Visitor(path);
+		String ret = (String) visitor.visit(parser.program());
+		if (visitor.switchStatementUsed) {
+			ret = SWITCH_BODY + ret;
+		}
+		return ret;
 	}
 
 	static class Visitor extends MLuaBaseVisitor<Object> {
 
 		public String filePath;
+		public boolean switchStatementUsed = false; // to add the switch
+													// statement function
 
 		public Visitor(String path) {
 			this.filePath = path;
 		}
 
 		public Object visitProgram(ProgramContext ctx) {
-			return ctx.programThing().stream().map(this::visit).map(e -> e.toString()).collect(Collectors.joining());
+			String program = ctx.programThing().stream().map(this::visit).map(e -> e.toString())
+					.collect(Collectors.joining());
+			return program;
 		}
 
 		public Object visitFuncDeclThing(FuncDeclThingContext ctx) {
@@ -182,12 +198,34 @@ public class MidnightasLua {
 			return builder.toString();
 		}
 
+		public Object visitSwitchStatement(SwitchStatementContext ctx) {
+			this.switchStatementUsed = true;
+			StringBuilder builder = new StringBuilder();
+			builder.append("(_mlua_switch{");
+			for (int i = 0; i < ctx.program().size(); i++) {
+				if (ctx.program(i).equals(ctx.defaultCase))
+					continue;
+				builder.append("[");
+				builder.append(visit(ctx.expr(i + 1)));
+				builder.append("]=function()");
+				builder.append(visit(ctx.program(i)));
+				builder.append(" end,");
+			}
+			if (ctx.defaultCase != null) {
+				builder.append("default=function()");
+				builder.append(visit(ctx.defaultCase));
+				builder.append(" end,");
+			}
+			return builder.append("}):case(").append(visit(ctx.expr(0))).append(");").toString();
+		}
+
 		public Object visitReturnStatement(ReturnStatementContext ctx) {
 			return "return " + visit(ctx.expr()) + ";";
 		}
 
 		public Object visitSetVarExpr(SetVarExprContext ctx) {
-			return (ctx.local() == null ? "" : "local") + " " + visit(ctx.funcDeclArgs()) + "=" + visit(ctx.funcCallArgs());
+			return (ctx.local() == null ? "" : "local") + " " + visit(ctx.funcDeclArgs()) + "="
+					+ visit(ctx.funcCallArgs());
 		}
 
 		public Object visitOpExpr(OpExprContext ctx) {
@@ -227,9 +265,10 @@ public class MidnightasLua {
 					break;
 				case "~=":
 					result = ((Double) left) != (Double) right;
+					break;
 				}
 			else
-				result = left + ctx.op.getText() + right;
+				result = left + " " + ctx.op.getText() + " " + right;
 			return result;
 		}
 
@@ -426,8 +465,11 @@ public class MidnightasLua {
 		options.addOption("f", true, "The file path.");
 		CommandLine commandLine = new DefaultParser().parse(options, args);
 		File file = new File(commandLine.getOptionValue("f"));
-		if(!file.isAbsolute())
-			file = new File(System.getProperty("user.dir"), file.getPath()); // fix to issue #1
+		if (!file.isAbsolute())
+			file = new File(System.getProperty("user.dir"), file.getPath()); // fix
+																				// to
+																				// issue
+																				// #1
 		System.out.println(compile(file.getParentFile().getAbsolutePath(), FileUtils.readFileToString(file)).trim());
 	}
 
