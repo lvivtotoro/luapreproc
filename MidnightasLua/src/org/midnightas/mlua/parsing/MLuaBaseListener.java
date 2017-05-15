@@ -76,6 +76,18 @@ public class MLuaBaseListener implements MLuaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLuaIncludeThing(MLuaParser.LuaIncludeThingContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLuaIncludeThing(MLuaParser.LuaIncludeThingContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterFuncDecl(MLuaParser.FuncDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}

@@ -66,6 +66,18 @@ public interface MLuaListener extends ParseTreeListener {
 	 */
 	void exitIncludeThing(MLuaParser.IncludeThingContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code luaIncludeThing}
+	 * labeled alternative in {@link MLuaParser#programThing}.
+	 * @param ctx the parse tree
+	 */
+	void enterLuaIncludeThing(MLuaParser.LuaIncludeThingContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code luaIncludeThing}
+	 * labeled alternative in {@link MLuaParser#programThing}.
+	 * @param ctx the parse tree
+	 */
+	void exitLuaIncludeThing(MLuaParser.LuaIncludeThingContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link MLuaParser#funcDecl}.
 	 * @param ctx the parse tree
 	 */

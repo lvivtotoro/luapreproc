@@ -52,6 +52,13 @@ public class MLuaBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements M
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitLuaIncludeThing(MLuaParser.LuaIncludeThingContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitFuncDecl(MLuaParser.FuncDeclContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

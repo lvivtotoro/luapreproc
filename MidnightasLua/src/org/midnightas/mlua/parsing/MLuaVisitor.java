@@ -45,6 +45,13 @@ public interface MLuaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitIncludeThing(MLuaParser.IncludeThingContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code luaIncludeThing}
+	 * labeled alternative in {@link MLuaParser#programThing}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLuaIncludeThing(MLuaParser.LuaIncludeThingContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link MLuaParser#funcDecl}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
