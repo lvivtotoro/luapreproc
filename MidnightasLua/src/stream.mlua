@@ -1,0 +1,35 @@
+class Stream contains
+	constructor(val)
+		self.val = val;
+	end
+	function map(func)
+		local new = {};
+		for k, v in ipairs(self.val) do
+			new[k] = func(v);
+		end
+		self.val = new;
+		return self;
+	end
+	function filter(func)
+		local new = {};
+		foreach v in self.val do
+			if func(v) then
+				table.insert(new, v);
+			end
+		end
+		self.val = new;
+		return self;
+	end
+	function forEach(func)
+		foreach v in self.val do
+			func(v);
+		end
+		return self;
+	end
+	function getArray()
+		return self.val;
+	end
+	function getCount()
+		return #self.val;
+	end
+end
