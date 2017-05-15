@@ -44,6 +44,7 @@ import org.midnightas.mlua.parsing.MLuaParser.IncludeThingContext;
 import org.midnightas.mlua.parsing.MLuaParser.InstanceofExprContext;
 import org.midnightas.mlua.parsing.MLuaParser.KeyTableContext;
 import org.midnightas.mlua.parsing.MLuaParser.LambdaAtomContext;
+import org.midnightas.mlua.parsing.MLuaParser.LuaIncludeThingContext;
 import org.midnightas.mlua.parsing.MLuaParser.NilAtomContext;
 import org.midnightas.mlua.parsing.MLuaParser.NumberAtomContext;
 import org.midnightas.mlua.parsing.MLuaParser.NumberContext;
@@ -82,7 +83,7 @@ public class MidnightasLua {
 	static {
 		SWITCH_BODY = "function _mlua_switch(t)t.case=function(self,x)local f=self[x] or self.default;if f then if type(f)==\"function\" then f(x,self)else error(\"case \"..tostring(x)..\" not a function\")end end end return t end"
 				+ "\n";
-		for (String include : new String[] { "string" })
+		for (String include : new String[] { "string", "stream" })
 			builtinIncludes.put(include,
 					new BufferedReader(
 							new InputStreamReader(MidnightasLua.class.getResourceAsStream("/" + include + ".mlua")))
@@ -144,6 +145,10 @@ public class MidnightasLua {
 				e.printStackTrace();
 			}
 			return "";
+		}
+		
+		public Object visitLuaIncludeThing(LuaIncludeThingContext ctx) {
+			return "include(" + visit(ctx.string()) + ");";
 		}
 
 		public Object visitStatementThing(StatementThingContext ctx) {
@@ -377,22 +382,24 @@ public class MidnightasLua {
 		 * I bet you cant read this code, too.
 		 */
 		public Object visitClassCreate(ClassCreateContext ctx) {
-			StringBuilder builder = new StringBuilder(ctx.name.getText() + "={};");
-			builder.append(ctx.name.getText() + ".__index=" + ctx.name.getText() + ";");
-			builder.append("setmetatable(" + ctx.name.getText() + ", {");
+			String classNameDotNotation = visit(ctx.name).toString();
+			String classExtendingDotNotation = visit(ctx.name).toString();
+			StringBuilder builder = new StringBuilder(classNameDotNotation + "={};");
+			builder.append(classNameDotNotation + ".__index=" + classNameDotNotation + ";");
+			builder.append("setmetatable(" + classNameDotNotation + ", {");
 			if (ctx.extending != null)
-				builder.append("__index=" + ctx.extending.getText() + ",");
+				builder.append("__index=" + classExtendingDotNotation + ",");
 			builder.append("__call=function(cls, ...) local self = setmetatable({}, cls);self._mlua_class="
-					+ ctx.name.getText() + ";self:__init__(...);return self;end});\n");
+					+ classNameDotNotation + ";self:__init__(...);return self;end});\n");
 			boolean customConstructor = false;
 			for (ClassMemberContext member : ctx.classBlock().classMember()) {
 				if (member instanceof ConstructorMemberContext) {
 					customConstructor = true;
-					builder.append("function " + ctx.name.getText() + ":__init__(");
+					builder.append("function " + classNameDotNotation + ":__init__(");
 					String funcDeclArgs = visit(((ConstructorMemberContext) member).funcDeclArgs()).toString();
 					builder.append(funcDeclArgs + ")");
 					if (ctx.extending != null)
-						builder.append(ctx.extending.getText() + ".__init__("
+						builder.append(classExtendingDotNotation + ".__init__("
 								+ (funcDeclArgs.trim().isEmpty() ? "self" : "self, ") + funcDeclArgs + ")");
 					for (ClassMemberContext member0 : ctx.classBlock().classMember()) {
 						if (member0 instanceof VarMemberContext) {
@@ -407,7 +414,7 @@ public class MidnightasLua {
 				}
 			}
 			if (!customConstructor) {
-				builder.append("function " + ctx.name.getText() + ":__init__()");
+				builder.append("function " + classNameDotNotation + ":__init__()");
 				for (ClassMemberContext member0 : ctx.classBlock().classMember()) {
 					if (member0 instanceof VarMemberContext) {
 						VarMemberContext var = (VarMemberContext) member0;
@@ -423,7 +430,7 @@ public class MidnightasLua {
 					continue;
 				if (member instanceof FuncMemberContext) {
 					FuncDeclContext funcDecl = ((FuncMemberContext) member).funcDecl();
-					builder.append("function " + ctx.name.getText()
+					builder.append("function " + classNameDotNotation
 							+ (((FuncMemberContext) member).staticKeyword() == null ? ":" : ".")
 							+ visit(funcDecl.dotNotation()));
 					builder.append("(" + visit(funcDecl.funcDeclArgs()) + ")");
@@ -433,7 +440,7 @@ public class MidnightasLua {
 					VarMemberContext var = (VarMemberContext) member;
 					if (var.staticKeyword() == null)
 						continue;
-					builder.append(ctx.name.getText() + "." + visit(var.identifier()) + "=" + visit(var.expr()) + ";");
+					builder.append(classNameDotNotation + "." + visit(var.identifier()) + "=" + visit(var.expr()) + ";");
 				}
 			}
 			return builder.toString();
